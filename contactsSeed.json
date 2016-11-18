@@ -1,0 +1,20 @@
+{
+	"contacts":{
+		
+		"contact0":{
+			"name":"moe thelawn",
+			"phone": 123-456-6666,
+			"email": "moe@gmail.com"
+		},
+		"contact1":{
+			"name":"dale  thelawn",
+			"phone": 123-456-6666,
+			"email": "dale@gmail.com"
+		},
+		"contact2":{
+			"name":"Jeff thelawn",
+			"phone": 123-456-6666,
+			"email": "jeff@gmail.com"
+		}
+	}
+}
