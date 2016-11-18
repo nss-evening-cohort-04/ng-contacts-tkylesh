@@ -40,28 +40,37 @@
 	        <h4 class="modal-title">ADD NEW CONTACT</h4>
 	      </div>
 	      <div class="modal-body">
-	      	<form>
+	      <!-- FORM ============ -->
+	      	<form ng-submit="addNewContact()">
+
+	      		<!--new contact name-->
 		      	<fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-12">Name: </legend>
 		      		<div class="col-sm-10">
-		        		<input type="text" class="form-control" placeholder="First Last" ng-model="newContact.name" required/>
+		        		<input type="text" class="form-control" placeholder="First Last" name="contactName" ng-model="newContact.name" required/>
 		        	</div>
 		        </fieldset>
+
+		        <!--new contact phone number-->
 		        <fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-12">Phone Number: </legend>
 		      		<div class="col-sm-10">
-		        		<input type="text" class="form-control" placeholder="" ng-model="newContact.phone" required/>
+		        		<input type="tel" class="form-control" placeholder="" ng-model="newContact.phone" required/>
 		        	</div>
 		        </fieldset>
+
+		        <!--new contact email address-->
 		        <fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-10">Email: </legend>
 		      		<div class="col-sm-10">
-		        		<input type="text" class="form-control" placeholder="" ng-model="newContact.email" required></input>
+		        		<input type="email" class="form-control" placeholder="" ng-model="newContact.email" required></input>
 		        	</div>
 		        </fieldset>
+
+		        <!--submit & close buttons-->
 		        <fieldset class="form-group row">
 		        	<div class="col-sm-9 col-sm-offset-3">
-		        		<button type="button" class="btn btn-lg btn-success" ng-click="addNewContact()">Add Family Member</button>
+		        		<button type="submit" class="btn btn-lg btn-success" ng-disabled="userForm.$invalid">ADD NEW CONTACT</button>
 		        	</div>
 		        </fieldset>
 	        </form>
