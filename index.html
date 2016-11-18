@@ -13,7 +13,7 @@
 			<h1>CONTACT LIST</h1>	
 		</div>
 		<div class="col-xs-5">
-			<button class="btn btn-success col-xs-6 bottomaligned" data-toggle="modal" data-target="#addMemberModal">add <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+			<button class="btn btn-success col-xs-6 bottomaligned" data-toggle="modal" data-target="#addMemberModal">ADD <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
 		</div>
 	</div>
     <div ng-repeat="contact in contacts">
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 
 <!-- Modal -->
@@ -44,24 +44,24 @@
 		      	<fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-12">Name: </legend>
 		      		<div class="col-sm-10">
-		        		<input type="text" id="inputName" class="form-control" placeholder="First Last" required/>
+		        		<input type="text" class="form-control" placeholder="First Last" ng-model="newContact.name" required/>
 		        	</div>
 		        </fieldset>
 		        <fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-12">Phone Number: </legend>
 		      		<div class="col-sm-10">
-		        		<input type="text" id="inputPhone" class="form-control" placeholder="" required/>
+		        		<input type="text" class="form-control" placeholder="" ng-model="newContact.phone" required/>
 		        	</div>
 		        </fieldset>
 		        <fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-10">Email: </legend>
 		      		<div class="col-sm-10">
-		        		<inpu type="text" id="inputEmail" class="form-control" placeholder="" required></input>
+		        		<inpu type="text" class="form-control" placeholder="" ng-model="newContact.email" required></input>
 		        	</div>
 		        </fieldset>
 		        <fieldset class="form-group row">
 		        	<div class="col-sm-9 col-sm-offset-3">
-		        		<button type="button" class="btn btn-lg btn-success" id="addSubmit">Add Family Member</button>
+		        		<button type="button" class="btn btn-lg btn-success" ng-click="addNewContact()">Add Family Member</button>
 		        	</div>
 		        </fieldset>
 	        </form>
@@ -73,6 +73,7 @@
 	  </div>
 	</div>
 
+</div><!--end of ContactController div-->
 
 
 
