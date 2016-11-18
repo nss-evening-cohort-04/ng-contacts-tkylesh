@@ -1,7 +1,7 @@
 "use strict";
 
 
-app.factory("ItemFactory",function($q, $http, FIREBASE_CONFIG){
+app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 	var getContactList = function(){
 		return $q((resolve,reject)=>{
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json`)
@@ -18,4 +18,26 @@ app.factory("ItemFactory",function($q, $http, FIREBASE_CONFIG){
 			});
 		});
 	};
+
+	var postNewContact = function(newContact){
+		return $q((resolve,reject) =>{
+			$http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify({
+				name: newContact.name,
+				phone: newContact.phone,
+				email: newContact.email
+			}))
+			.success(function(postResponse){
+				resolve(postResponse);
+			})
+			.error(function(postError){
+				reject(postError);
+			});
+		});
+	};
+
+
+
+
+
+	return {getContactList:getContactList, postNewContact:postNewContact};
 });
