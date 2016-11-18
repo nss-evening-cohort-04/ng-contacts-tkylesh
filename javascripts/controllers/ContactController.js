@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("contactController",function($scope, ContactFactory){
+app.controller("ContactController",function($scope, ContactFactory){
 	$scope.showListView = true;
 	$scope.newContact = {};
 	$scope.contacts= [];

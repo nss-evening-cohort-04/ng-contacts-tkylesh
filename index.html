@@ -7,7 +7,20 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body ng-app="AddressBookApp">
-	<h1>Address Book</h1>
+<div ng-controller="ContactController">
+	<h1>Contacts</h1>
+    <div ng-repeat="contact in contacts">
+        <div class="panel panel-default">
+           <div class="panel-body">
+	            <div class="col-xs-3">{{contact.email}}</div>
+	            <div class="col-xs-3">{{contact.email}}</div>
+	            <div class="col-xs-3">{{contact.phone}}</div>
+	            <div class="col-xs-3"><button class="btn btn-danger fa fa-trash-o"></button></div>
+            </div>
+        </div>
+    </div>
+</div>	
+
 
 
 
