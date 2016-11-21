@@ -14,5 +14,9 @@ app.config(function($routeProvider){
 			templateUrl: 'partials/contact-new.html',
 			controller: 'ContactNewCtrl'
 		})
+		.when('/contacts/edit/:id', {
+			templateUrl: 'partials/contact-new.html',
+			controller: 'ContactEditCtrl'
+		})
 		.otherwise('/contacts/list');
 })
