@@ -1,4 +1,4 @@
 
 "use strict";
 
-var app = angular.module("AddressBookApp",[]);
+var app = angular.module("ContactsApp",["ngRoute"]);

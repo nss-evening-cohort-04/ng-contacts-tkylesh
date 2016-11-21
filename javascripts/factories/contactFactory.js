@@ -35,6 +35,18 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 		});
 	};
 
+	var deleteContact = function(contactId){
+	    return $q((resolve, reject) => {
+	      $http.delete(`${FIREBASE_CONFIG.databaseURL}/contactss/${contactId}.json`)
+	      .success(function(deleteResponse){
+	        resolve(deleteResponse);
+	      })
+	      .error(function(deleteError){
+	        reject(deleteError);
+	      });
+	    });
+	};
+
 
 
 

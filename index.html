@@ -6,44 +6,39 @@
     <link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
-<body ng-app="AddressBookApp" class="container">
-<div ng-controller="ContactController">
+<body ng-app="ContactsApp" class="container">
+<div>
 	<div class="row">
 		<div class="col-xs-3 col-xs-offset-4 text-center">
-			<h1>CONTACT LIST</h1>	
+			<h1>CONTACTS</h1>	
 		</div>
 		<div class="col-xs-5">
-			<button class="btn btn-success col-xs-6 bottomaligned" data-toggle="modal" data-target="#addMemberModal">ADD <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+			<button class="btn btn-success col-xs-6 bottomaligned">ADD <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
 		</div>
 	</div>
-    <div ng-repeat="contact in contacts">
-        <div class="panel panel-default">
-           <div class="panel-body">
-	            <div class="col-xs-3">{{contact.name}}</div>
-	            <div class="col-xs-3">{{contact.email}}</div>
-	            <div class="col-xs-3">{{contact.phone}}</div>
-	            <div class="col-xs-3"><button class="btn btn-danger fa fa-trash-o"></button></div>
-            </div>
-        </div>
-    </div>
 
+
+	<div class="row">
+        <div class="col-xs-offset-2 col-xs-8" ng-view></div>
+    </div>
+</div>
 
 
 <!-- Modal -->
-	<div id="addMemberModal" class="modal fade" role="dialog">
+	<!-- <div id="addMemberModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
-	    <!-- Modal content-->
+	    
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
 	        <h4 class="modal-title">ADD NEW CONTACT</h4>
 	      </div>
 	      <div class="modal-body">
-	      <!-- FORM ============ -->
+	     
 	      	<form ng-submit="addNewContact()">
 
-	      		<!--new contact name-->
+	      		
 		      	<fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-12">Name: </legend>
 		      		<div class="col-sm-10">
@@ -51,7 +46,6 @@
 		        	</div>
 		        </fieldset>
 
-		        <!--new contact phone number-->
 		        <fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-12">Phone Number: </legend>
 		      		<div class="col-sm-10">
@@ -59,7 +53,7 @@
 		        	</div>
 		        </fieldset>
 
-		        <!--new contact email address-->
+		       
 		        <fieldset class="form-group row">
 		      		<legend class="col-form-legend col-sm-10">Email: </legend>
 		      		<div class="col-sm-10">
@@ -67,7 +61,7 @@
 		        	</div>
 		        </fieldset>
 
-		        <!--submit & close buttons-->
+		      
 		        <fieldset class="form-group row">
 		        	<div class="col-sm-9 col-sm-offset-3">
 		        		<button type="submit" class="btn btn-lg btn-success" ng-disabled="userForm.$invalid">ADD NEW CONTACT</button>
@@ -80,23 +74,26 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>
-
-</div><!--end of ContactController div-->
+	</div> -->
 
 
 
 
 
- <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
- <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
- <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
- <!-- <script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script> -->
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script>
+
+
 <script type="text/javascript" src="/javascripts/app.js"></script>
 <script type="text/javascript" src="/javascripts/AppConstants.js"></script>
 <script type="text/javascript" src="/javascripts/AppConfig.js"></script>
 <script type="text/javascript" src="/javascripts/factories/ContactFactory.js"></script>
-<script type="text/javascript" src="/javascripts/controllers/ContactController.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/ContactListCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/ContactNewCtrl.js"></script>
 </body>
 </html>
