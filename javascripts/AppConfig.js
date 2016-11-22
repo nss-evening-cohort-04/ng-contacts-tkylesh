@@ -6,6 +6,10 @@ app.run(function(FIREBASE_CONFIG){
 
 app.config(function($routeProvider){
 	$routeProvider
+		.when('/auth', {
+			templateUrl: 'partials/auth.html',
+			controller:'AuthCtrl'
+		})
 		.when('/contacts/list', {
 			templateUrl: 'partials/contact-list.html',
 			controller: 'ContactListCtrl'
