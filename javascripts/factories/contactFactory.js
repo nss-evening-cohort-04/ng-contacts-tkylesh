@@ -55,7 +55,7 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 		      })
 		      .error(function(getSingleError){
 		        reject(getSingleError);
-		      });
+		    });
 	    });
   	};
 
@@ -81,5 +81,5 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 
 
 
-	return {getContactList:getContactList, postNewContact:postNewContact};
+	return {getContactList:getContactList, postNewContact:postNewContact, getSingleContact:getSingleContact, editContact:editContact};
 });
