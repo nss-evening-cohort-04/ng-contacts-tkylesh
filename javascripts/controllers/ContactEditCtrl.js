@@ -3,6 +3,7 @@
 app.controller("ContactEditCtrl", function($scope, $location, $routeParams, ContactFactory){
 	$scope.newContact = {};
 	let contactId = $routeParams.id;
+	console.log("$routeParams", contactId);
 
 	ContactFactory.getSingleContact(contactId).then(function(oneContact){
 		oneContact.id = contactId;
@@ -15,5 +16,4 @@ app.controller("ContactEditCtrl", function($scope, $location, $routeParams, Cont
 			$location.url("/contacts/list");
 		});
 	};
-
 });

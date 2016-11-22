@@ -63,9 +63,9 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 	    return $q((resolve, reject) =>{
 	      $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${editContact.id}.json`,
 	         JSON.stringify({
-	           name: editItem.name,
-	            phone: editItem.phone,
-	            email: editItem.email
+	           name: editContact.name,
+	            phone: editContact.phone,
+	            email: editContact.email
 	         })
 	       )
 	        .success(function(editResponse){
