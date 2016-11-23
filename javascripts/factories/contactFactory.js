@@ -2,9 +2,9 @@
 
 
 app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
-	var getContactList = function(){
+	var getContactList = function(userId){
 		return $q((resolve,reject)=>{
-			$http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json`)
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userId}"`)
 			.success(function(response){
 				let contacts = [];
 				Object.keys(response).forEach(function(key){
@@ -24,7 +24,8 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 			$http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify({
 				name: newContact.name,
 				phone: newContact.phone,
-				email: newContact.email
+				email: newContact.email,
+				uid: newItem.uid
 			}))
 			.success(function(postResponse){
 				resolve(postResponse);
@@ -65,7 +66,8 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 	         JSON.stringify({
 	           name: editContact.name,
 	            phone: editContact.phone,
-	            email: editContact.email
+	            email: editContact.email,
+	            uid: newItem.uid
 	         })
 	       )
 	        .success(function(editResponse){
