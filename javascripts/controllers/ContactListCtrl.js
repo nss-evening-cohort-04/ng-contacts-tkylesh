@@ -2,6 +2,7 @@
 
 app.controller("ContactListCtrl", function($scope, $rootScope, ContactFactory){
 	$scope.contacts = {};
+	console.log("$rootScope.user.uid", $rootScope.user.uid);
 
 	let getContacts = function(){
 		ContactFactory.getContactList($rootScope.user.uid).then(function(fbContacts){

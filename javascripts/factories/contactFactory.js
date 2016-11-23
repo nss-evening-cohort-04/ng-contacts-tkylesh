@@ -3,6 +3,7 @@
 
 app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 	var getContactList = function(userId){
+		console.log(userId);
 		return $q((resolve,reject)=>{
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/contacts.json?orderBy="uid"&equalTo="${userId}"`)
 			.success(function(response){
