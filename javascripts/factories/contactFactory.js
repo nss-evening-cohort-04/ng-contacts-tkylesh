@@ -26,7 +26,7 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 				name: newContact.name,
 				phone: newContact.phone,
 				email: newContact.email,
-				uid: newItem.uid
+				uid: newContact.uid
 			}))
 			.success(function(postResponse){
 				resolve(postResponse);
@@ -68,7 +68,7 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 	           name: editContact.name,
 	            phone: editContact.phone,
 	            email: editContact.email,
-	            uid: newItem.uid
+	            uid: editContact.uid
 	         })
 	       )
 	        .success(function(editResponse){

@@ -8,15 +8,7 @@
 </head>
 <body ng-app="ContactsApp" class="container">
 <div>
-	<div class="row">
-		<div class="col-xs-3 col-xs-offset-4 text-center">
-			<h1>CONTACTS</h1>	
-		</div>
-		<div class="col-xs-5">
-			<a ng-href="#/contacts/new" class="btn btn-success col-xs-6 bottomaligned">ADD <i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
-		</div>
-	</div>
-
+	<div ng-include="'./partials/navbar.html'"></div>
 
 	<div class="row">
         <div class="col-xs-offset-2 col-xs-8" ng-view></div>
@@ -38,6 +30,7 @@
 <script type="text/javascript" src="/javascripts/factories/ContactFactory.js"></script>
 <script type="text/javascript" src="/javascripts/factories/UserFactory.js"></script>
 <script type="text/javascript" src="/javascripts/controllers/AuthCtrl.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/NavCtrl.js"></script>
 <script type="text/javascript" src="/javascripts/controllers/ContactListCtrl.js"></script>
 <script type="text/javascript" src="/javascripts/controllers/ContactNewCtrl.js"></script>
 <script type="text/javascript" src="/javascripts/controllers/ContactEditCtrl.js"></script>
