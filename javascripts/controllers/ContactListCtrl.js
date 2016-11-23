@@ -13,10 +13,10 @@ app.controller("ContactListCtrl", function($scope, $rootScope, ContactFactory){
 
 	getContacts();
 
-	 $scope.deleteContact = function(contactId){
-    ContactFactory.deleteContact(contactId).then(function(response){
-      getItems();
-    });
-  };
-
+	$scope.deleteContact = function(contactId){
+		console.log("you deleted me", contactId);
+	    ContactFactory.deleteContact(contactId).then(function(response){
+	      getItems();
+	    });
+  	};
 });
