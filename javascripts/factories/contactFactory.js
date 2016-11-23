@@ -84,5 +84,5 @@ app.factory("ContactFactory",function($q, $http, FIREBASE_CONFIG){
 
 
 
-	return {getContactList:getContactList, postNewContact:postNewContact, getSingleContact:getSingleContact, editContact:editContact};
+	return {getContactList:getContactList, postNewContact:postNewContact, deleteContact:deleteContact, getSingleContact:getSingleContact, editContact:editContact};
 });
