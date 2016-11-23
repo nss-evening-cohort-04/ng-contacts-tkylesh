@@ -16,7 +16,7 @@ app.controller("ContactListCtrl", function($scope, $rootScope, ContactFactory){
 	$scope.deleteContact = function(contactId){
 		console.log("you deleted me", contactId);
 	    ContactFactory.deleteContact(contactId).then(function(response){
-	      getItems();
+	      getContacts();
 	    });
   	};
 });
