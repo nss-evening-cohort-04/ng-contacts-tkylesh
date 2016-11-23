@@ -1,0 +1,33 @@
+{
+	"contacts":{
+		
+		"contact0":{
+			"name":"moe thelawn",
+			"phone": "123-456-6666",
+			"email": "moe@gmail.com",
+			"uid": "2Bg4NSEgReUTMffunVZBiPS5Vp83"
+		},
+		"contact1":{
+			"name":"dale  thelawn",
+			"phone": "123-456-6666",
+			"email": "dale@gmail.com",
+			"uid": "2Bg4NSEgReUTMffunVZBiPS5Vp83"
+		},
+		"contact2":{
+			"name":"Jeff thelawn",
+			"phone": "123-456-6666",
+			"email": "jeff@gmail.com",
+			"uid": "MR3FFMyMQ0fKaKik1ZT8YicS9sl2"
+		}
+	},
+	"users":{
+	    "user0":{
+	      "uid":"2Bg4NSEgReUTMffunVZBiPS5Vp83",
+	      "username":"a"
+	    },
+	    "user1":{
+	      "uid":"MR3FFMyMQ0fKaKik1ZT8YicS9sl2",
+	      "username":"b"
+	    }
+	}
+}

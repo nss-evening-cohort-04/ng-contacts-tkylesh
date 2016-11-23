@@ -1,0 +1,26 @@
+<h3>New Contact</h3>
+<form ng-submit="addNewContact()" class="form-horizontal">
+	<!--new contact name-->
+	<div class="form-group">
+		<label for="contactName">Name: </label>
+		<input type="text" class="form-control" placeholder="First Last" id="contactName" ng-model="newContact.name" required/>
+	</div>
+
+	<!--new contact phone number-->
+	<div class="form-group">
+			<label for="contactPhone">Phone Number: </label>
+			<input type="tel" class="form-control" placeholder="" id="contactPhone" ng-model="newContact.phone" required/>
+	</div>
+
+	<!--new contact email address-->
+	<div class="form-group">
+			<label for="contactEmail">Email: </label>
+			<input type="email" class="form-control" placeholder="" id="contactEmail" ng-model="newContact.email" required></input>
+	</div>
+
+	<!--submit & close buttons-->
+	<div class="form-group">
+			<button type="submit" class="btn btn-lg btn-success">ADD NEW CONTACT</button>
+			<a href="#/contacts/list" class="btn btn-lg btn-danger pull-right">&times;</a>
+	</div>
+</form>
